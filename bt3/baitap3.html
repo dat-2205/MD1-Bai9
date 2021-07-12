@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="bt3.css">
+</head>
+<body>
+  <div class="container">
+    <div class="display" >
+      <p id="display">0</p>
+      <p id="output"></p>
+    </div>
+    <div class="row">
+      <button onclick="allclear()" style="width: 144px; background-color: coral">AC</button>
+      <button onclick="del()">Del</button>
+      <button onclick="getchar('/')">/</button>
+    </div>
+    <div class="row">
+      <button onclick="getchar('1')">1</button>
+      <button onclick="getchar('2')">2</button>
+      <button onclick="getchar('3')">3</button>
+      <button onclick="getchar('+')">+</button>
+    </div>
+    <div class="row">
+      <button onclick="getchar('4')">4</button>
+      <button onclick="getchar('5')">5</button>
+      <button onclick="getchar('6')">6</button>
+      <button onclick="getchar('-')">-</button>
+    </div>
+    <div class="row">
+      <button onclick="getchar('7')">7</button>
+      <button onclick="getchar('8')">8</button>
+      <button onclick="getchar('9')">9</button>
+      <button onclick="getchar('*')">x</button>
+
+    </div>
+    <div class="row">
+      <button onclick="getchar('0')">0</button>
+      <button onclick="getchar('.')">.</button>
+      <button onclick="math()" style="background-color: aqua; width: 144px">=</button>
+    </div>
+  </div>
+  <script src="bt3.js">
+  </script>
+</body>
+</html>
