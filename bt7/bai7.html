@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Mức 1: dưới 100 phút : 1000đ</p>
+<p>Mức 2: từ trên 100 phút : 1200đ</p>
+<p>Mức 3: từ trên 300 phút : 1500đ</p>
+<p>Mức 4: từ trên 500 phút : 1700đ</p>
+<input type="number" id="phut">
+<button onclick="hoahong()">Tính tiền cước</button>
+<div id="in"></div>
+<script>
+    function hoahong() {
+        let a = parseInt( document.getElementById("phut").value);
+        let b = 1000;
+        let c = 1200;
+        let d = 1500;
+        let e = 1700;
+
+        if(a < 0){
+            document.getElementById("in").innerText = 'Số phút không đúng!!';
+        }else{
+            if(a<100){
+                document.getElementById("in").innerText = "Mức 1 - Tiền cước của bạn là: " + (a*b) + "VND";
+            } else if (a>100){
+                document.getElementById("in").innerText = "Mức 2 - Tiền cước của bạn là: " + (100*b + (a-100)*c) + "VND";
+            }else if (a>300){
+                document.getElementById("in").innerText = "Mức 3 - Tiền cước của bạn là: " + (300*c+(a-300)*d) + "VND";
+            }else if(a>500){
+                document.getElementById("in").innerText = "Mức 4 - Tiền cước của bạn là: " + (500*c+(a-500)*e) + "VND";
+            }
+        }
+    }
+</script>
+</body>
+</html>

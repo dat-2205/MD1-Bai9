@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="num">
+<button onclick="check()">check</button>
+<p id="p"></p>
+<script>
+  function check() {
+    let a = document.getElementById("num").value;
+    a = parseInt(a);
+    if(a<0){
+      document.getElementById("p").innerHTML = "Số này nhỏ hơn 0";
+    }else if(a==0){
+      document.getElementById("p").innerHTML = "Bạn nhập số không";
+    }
+    else{
+      document.getElementById("p").innerHTML = "Số này lớn hơn 0";
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhap a</label><input type="text" id="1"> <br>
+<label>Nhap b</label><input type="text" id="2"> <br>
+<button onclick="kiemtra()">Kiểm tra</button>
+<div id="display"></div>
+
+<script>
+
+  function kiemtra(){
+    let a = parseInt(document.getElementById("1").value);
+    let b = parseInt(document.getElementById("2").value);
+    if(a % b == 0 ){
+      document.getElementById("display").innerText = "Số a chia hết cho b!!!";
+    }else {
+      document.getElementById("display").innerText = "Số a không chia hết cho b!!!";
+    }
+    console.log(a%b);
+
+  }
+
+</script>
+</body>
+</html>

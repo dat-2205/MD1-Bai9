@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="sold">
+<button onclick="hoahong()">Tính hoa hồng</button>
+<div id="in"></div>
+<script>
+  function hoahong() {
+    let a = parseInt( document.getElementById("sold").value);
+
+    if(a < 0){
+      document.getElementById("in").innerText = 'Số lượng bán không đúng!!';
+    }else{
+      if(a<100){
+        document.getElementById("in").innerText = "Bạn chưa có hoa hồng";
+      } else if (a>100){
+        document.getElementById("in").innerText = "Mức 1 - Tiền thưởng của bạn là: " +(((a*3)/100)*100000) + "VND";
+      }else if (a>300){
+        document.getElementById("in").innerText = "Mức 2 - Tiền thưởng của bạn là: " + (((a*5)/100)*100000) + "VND";
+      }else if(a>500){
+        document.getElementById("in").innerText = "Mức 3 - Tiền thưởng của bạn là: " +(((a*7)/100)*100000) + "VND";
+      }
+    }
+  }
+</script>
+</body>
+</html>

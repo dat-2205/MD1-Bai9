@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="age">
+<button onclick="checkage()">Kiển tra</button>
+<div id="display"></div>
+<script>
+  function checkage() {
+    let a = parseInt(document.getElementById("age").value);
+    if (a<15){
+      document.getElementById("display").innerText = "Học sinh này chưa đủ tuổi!!"
+    }else{
+      document.getElementById("display").innerText = "Học sinh này đã đủ tuổi vào lớp 10!!"
+
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Điểm kiểm tra</label> <input type="number" id="diem1" > <br>
+<label>Điểm giữa kỳ</label> <input type="number" id="diem2" > <br>
+<label>Điểm cuối kỳ</label> <input type="number" id="diem3" > <br>
+<button onclick="xephang()">Lấy xếp hạng</button>
+<div id="display"></div>
+<script>
+  function xephang() {
+
+    let a = parseInt(document.getElementById("diem1").value);
+    let b = parseInt(document.getElementById("diem2").value);
+    let c = parseInt(document.getElementById("diem3").value);
+    let tongket = (a + b*2 + c*3)/6;
+    if(a<0 || a > 10 || b<0 || b>10 || c<0 || c >10){
+      document.getElementById("display").innerText = "Nhập điểm không đúng"
+    }else {
+        if (7<tongket && tongket<=10){
+          document.getElementById("display").innerText = 'Học tốt'
+        }else if(5<tongket && tongket<=7){
+          document.getElementById("display").innerText = 'Học khá'
+        }else {
+          document.getElementById("display").innerText = 'Học kém'
+        }
+    }
+  }
+</script>
+</body>
+</html>

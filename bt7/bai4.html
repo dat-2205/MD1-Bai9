@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+a: <input type="number" id="num1">
+b: <input type="number" id="num2">
+c: <input type="number" id="num3">
+<button onclick="max()">Max</button>
+<div id="display"></div>
+<script>
+  function max() {
+    let a = parseInt(document.getElementById("num1").value);
+    let b = parseInt(document.getElementById("num2").value);
+    let c = parseInt(document.getElementById("num3").value);
+
+    if (a>b){
+      if (a>c){
+        document.getElementById("display").innerHTML = "Số " + a + " lớn nhất!"
+      }else{document.getElementById("display").innerHTML = "Số " + c + " lớn nhất!"}
+    }else if(b>c) {
+      document.getElementById("display").innerHTML = "Số " + b + " lớn nhất!"
+    }else document.getElementById("display").innerHTML = "Số " + c + " lớn nhất!"
+  }
+</script>
+</body>
+</html>
