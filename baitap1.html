@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <label for="weigth">Cân nặng :</label><input type="text" id="weigth" style="margin: 20px 0 20px 20px;"> <br>
+    <label for="heigth">Chiều cao :</label><input type="text" id="heigth" style="margin: 20px 0 20px 20px;"> <br>
+    <button style="margin: 20px 0 20px 20px;" onclick="bmi()">Get BMI</button>
+    <div id="display"></div>
+<script>
+    function bmi() {
+        let w = parseFloat(document.getElementById("weigth").value);
+        let h = parseFloat(document.getElementById("heigth").value);
+
+        let bmi = w/(h*h);
+
+        if (bmi < 18)
+            document.getElementById("display").innerHTML = "Underweight";
+        else if (bmi < 25.0)
+            document.getElementById("display").innerHTML = "Normal";
+        else if (bmi < 30.0)
+            document.getElementById("display").innerHTML = "Overweight";
+        else
+            document.getElementById("display").innerHTML = "Obese";
+     }
+</script>
+</body>
+</html>
