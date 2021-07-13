@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="met"> <br>
+<button onclick="changed()">Đổi</button>
+<p id="in"></p>
+<script>
+  function changed() {
+    let m = document.getElementById("met").value;
+    m = parseInt(m);
+
+    let ft  =m * 3.2808;
+    document.getElementById('in').innerHTML = ft + " ft";
+  }
+</script>
+</body>
+</html>

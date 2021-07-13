@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="canh"> <br>
+<button onclick="math()">Tính</button>
+<p id="in"></p>
+<script>
+  function math() {
+    let m = document.getElementById("canh").value;
+    m = parseInt(m);
+
+    let s  = m *m;
+    document.getElementById('in').innerHTML = 'diện tích là: ' + s  ;
+  }
+</script>
+</body>
+</html>

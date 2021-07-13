@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label >Nhập tuổi</label><input type="number" id="a"> <br>
+<button onclick="check()">Kiểm tra</button>
+<p id="in"></p>
+<script>
+    function check() {
+        let a = parseInt(document.getElementById("a").value);
+
+        if(0<a && a>120){
+            document.getElementById("in").innerHTML = "đây khônng phải tuổi con người!";
+        }else {
+            document.getElementById("in").innerHTML = "đây là tuổi con người!";
+        }
+    }
+</script>
+</body>
+</html>

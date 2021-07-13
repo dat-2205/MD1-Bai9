@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="nhietdo"> <br>
+<button onclick="changed()">Đổi</button>
+<p id="in"></p>
+<script>
+  function changed() {
+    let a = document.getElementById("nhietdo").value;
+    a = parseInt(a);
+
+    let f = (a*9)/5 + 32;
+    document.getElementById('in').innerHTML = f;
+  }
+</script>
+</body>
+</html>

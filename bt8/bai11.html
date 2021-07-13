@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính thuế</h1>
+<p>Mức 1: dưới 10tr số : 5%</p>
+<p>Mức 2: từ trên 10tr đến 18tr : 10%</p>
+<p>Mức 3: từ trên 18tr đến 32tr: 15%</p>
+<p>Mức 4: từ trên 32tr đến 52tr : 20%</p>
+<label >Thu nhập của bạn là :</label> <input type="number" id="phut">
+<button onclick="hoahong()">Tính thuế</button>
+<div id="in"></div>
+<script>
+  function hoahong() {
+    let a = parseInt( document.getElementById("phut").value);
+    let b = 0.05;
+    let c = 0.1;
+    let d = 0.15;
+    let e = 0.20;
+
+    if(a < 0){
+      document.getElementById("in").innerText = 'Số thu nhập không đúng!!';
+    }else{
+      if(a<100){
+        document.getElementById("in").innerText = "Mức 1 - Tiền thuế của bạn là: " + (a*b) + "VND";
+      } else if (a>10000000){
+        document.getElementById("in").innerText = "Mức 2 - Tiền thuế của bạn là: " + (10000000*b + (a-10000000)*c) + "VND";
+      }else if (a>18000000){
+        document.getElementById("in").innerText = "Mức 3 - Tiền thuế của bạn là: " + ( 10000000*b+8000000*c+(a-18000000)*d) + "VND";
+      }else if(a>32000000){
+        document.getElementById("in").innerText = "Mức 4 - Tiền thuế của bạn là: " + (10000000*b+8000000*c+12000000*d+(a-32000000)*e) + "VND";
+      }
+    }
+  }
+</script>
+</body>
+</html>

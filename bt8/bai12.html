@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label >Nhập số tiền bạn gửi:</label> <input type="number" id="tien"> <br>
+<label >Lãi mỗi tháng:</label> <input type="number" id="lai">
+<label >Tháng:</label><input type="number" id="sothang">
+<button onclick="lai()">Tính</button>
+<p id="in"></p>
+<script>
+  function lai() {
+    let a = parseInt(document.getElementById("tien").value) ;
+    let b = parseFloat(document.getElementById("lai").value) ;
+    let c = parseInt(document.getElementById("sothang").value);
+    let d = a*(Math.pow(1+b,c));
+    d = d.toFixed(2);
+  console.log(b)
+    document.getElementById("in").innerHTML = "Số tiền bạn có sau " + c + " tháng là: " + d + "VND";
+
+  }
+</script>
+</body>
+</html>
