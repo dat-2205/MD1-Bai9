@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+  <h2>Chỉ có thế chọn hai:</h2>
+  <input type="checkbox" name="checkb" id="check1" onclick="check(1)"> <label for="check1">Good</label> <br>
+  <input type="checkbox" name="checkb" id="check2" onclick="check(2)"> <label for="check2">Cheap</label> <br>
+  <input type="checkbox" name="checkb" id="check3" onclick="check(3)"> <label for="check3">Fast</label> <br>
+
+  <script>
+    function check(value) {
+        let a = document.getElementById("check1").checked;
+        let b = document.getElementById("check2").checked;
+        let c = document.getElementById("check3").checked;
+
+        if(value==1) {
+            if (b == true && c == true){
+                if (a == true) {
+                    document.getElementById("check3").checked = false;
+                }
+            }
+        }else if(value==2){
+            if (a==true&&c==true){
+                document.getElementById("check1").checked = false;
+            }
+        }else if(value==3){
+            if (a==true&&b==true){
+                document.getElementById("check2").checked = false;
+            }
+        }
+
+    }
+
+
+
+  </script>
+
+</body>
+</html>
