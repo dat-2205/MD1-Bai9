@@ -1,8 +1,11 @@
-.container {
-    width: 60%;
+body{
+    width: 40%;
     margin: auto;
     padding-top: 100px;
     align-items: center;
+}
+.container {
+
 }
 img {
     margin: auto;
